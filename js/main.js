@@ -13,11 +13,14 @@ let state = {
     totalquestions: 0,
     correctAnswers: 0,
 }
-function updateProblem() {
-    state.currentProblem = generateProblem()
-    problemElement.innerHTML = `${state.currentProblem.ratio}${state.currentProblem.degree}`
+function clear() {
     ourField.value = ""
     ourField.focus()
+}
+function updateProblem() {
+    state.currentProblem = generateProblem()
+    problemElement.innerHTML = `${state.currentProblem.ratio}${state.currentProblem.degree}`    
+    clear()
 }
 
 updateProblem()
@@ -128,6 +131,9 @@ function handleSubmit(e){
     } else {
         state.wrongAnswers++
         mistakes.textContent = state.wrongAnswers
+        clear()
+        problemElement.classList.add("animate-wrong")
+        setTimeout(() => problemElement.classList.remove("animate-wrong"), 331)
     }
     state.accuracy = (state.correctAnswers/state.totalquestions) *100
     curAccuracy.textContent = state.accuracy.toFixed(2)

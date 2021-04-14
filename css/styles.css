@@ -19,3 +19,16 @@ body {
     margin: 0;
     text-align: center;
 }
+@keyframes showError {
+    50% {
+        color: red;
+        transform: scale(1.2)
+    }
+    100% {
+        color: #333;
+        transform: scale(1);
+    }
+}
+.animate-wrong {
+    animation: .33s showError;
+}
