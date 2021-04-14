@@ -1,0 +1,21 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+.main-ui {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.our-form {
+    display: flex;
+    justify-content: center;
+}
+.problem {
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+}
