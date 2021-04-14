@@ -2,10 +2,10 @@
 // var ratio = ["sin", "cos", "tan"]
 // var degreesSize = 16
 // var ratioSize = 3
-var degreesSize = 4
-var ratioSize = 2
-var degrees = [0, 90, 180, 270];
-var ratio = ["sin", "cos"]
+var degreesSize = 2
+var ratioSize = 1
+var degrees = [30, 330];
+var ratio = ["sin"]
 const problemElement = document.querySelector(".problem")
 const ourForm = document.querySelector(".our-form")
 const ourField = document.querySelector(".our-field")
@@ -44,23 +44,35 @@ function handleSubmit(e){
     state.totalquestions++
     let correctAnswer
     const p = state.currentProblem
-    if (p.ratio === "sin" && (p.degree == 0 || p.degree == 180)) {
-        correctAnswer = "0"
-    } 
-    if (p.ratio === "cos" && (p.degree == 90) || p.degree == 270) {
-        correctAnswer = "0"
-    }
-    if (p.ratio === "sin" && p.degree == 270) {
-        correctAnswer = "-1"
-    }
-    if (p.ratio === "cos" && p.degree == 180) {
-        correctAnswer = "-1"
-    }
-    if (p.ratio === "cos" && p.degree == 0) {
-        correctAnswer = "1"
-    }
-    if (p.ratio === "sin" && p.degree == 90) {
-        correctAnswer = "1"
+    // if (p.ratio === "sin" && (p.degree == 0 || p.degree == 180)) {
+    //     correctAnswer = "0"
+    // } 
+    // if (p.ratio === "cos" && (p.degree == 90) || p.degree == 270) {
+    //     correctAnswer = "0"
+    // }
+    // if (p.ratio === "sin" && p.degree == 270) {
+    //     correctAnswer = "-1"
+    // }
+    // if (p.ratio === "cos" && p.degree == 180) {
+    //     correctAnswer = "-1"
+    // }
+    // if (p.ratio === "cos" && p.degree == 0) {
+    //     correctAnswer = "1"
+    // }
+    // if (p.ratio === "sin" && p.degree == 90) {
+    //     correctAnswer = "1"
+    // }
+    // if (p.ratio === "tan" && p.degree == 0) {
+    //     correctAnswer = "0"
+    // }
+    // if (p.ratio === "tan" && (p.degree == 90 || p.degree == 270)) {
+    //     correctAnswer = "undefined"
+    // } 
+    // if (p.ratio === "tan" && p.degree == 180) {
+    //     correctAnswer = "0"
+    // }
+    if (p.ratio === "sin" && (p.degree == 30) || p.degree == 330) {
+        correctAnswer = "√3/2"
     }
     // add the other trig ratios later
     if (ourField.value === correctAnswer) {
