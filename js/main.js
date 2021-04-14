@@ -62,7 +62,7 @@ function handleSubmit(e){
     if (p.ratio === "sin" && p.degree == 90) {
         correctAnswer = "1"
     }
-
+    // add the other trig ratios later
     if (ourField.value === correctAnswer) {
         state.correctAnswers++
         updateProblem()
