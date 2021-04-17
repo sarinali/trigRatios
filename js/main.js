@@ -113,7 +113,7 @@ function handleSubmit(e){
         correctAnswer = "-1"
     }
     if (p.ratio === "tan" && (p.degree == 150 || p.degree == 330)) {
-        correctAnswer = "-√3/2"
+        correctAnswer = "-√3/3"
     }
     if (p.ratio === "sin" && (p.degree == 210 || p.degree == 330)) {
         correctAnswer = "-1/2"
